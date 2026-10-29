@@ -1,1 +1,9 @@
-# books
+# Shelf
+
+A simple, static book site powered by the [Open Library API](https://openlibrary.org/developers/api).
+
+- **Top 5 books** — live from Open Library's weekly trending list
+- **Top 3 genres** — Romance, Fantasy, Thriller, with live work counts and covers
+- **Top 10 authors** — curated from US bestseller lists, with photos and details fetched live
+
+No build step. Open `index.html` locally, or deploy the repo root to Netlify (`netlify.toml` included).

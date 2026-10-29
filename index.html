@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shelf — What America Is Reading</title>
+  <meta name="description" content="Top authors, genres, and books in the US, powered by the Open Library API.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Shelf</p>
+    <h1>What America is reading.</h1>
+    <p class="lede">The books, authors, and genres at the top of the stack right now.</p>
+  </header>
+
+  <main>
+    <section>
+      <div class="section-head">
+        <span class="num">01</span>
+        <h2>Top 5 books this week</h2>
+      </div>
+      <ol id="books" class="books"></ol>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="num">02</span>
+        <h2>Top 3 genres</h2>
+      </div>
+      <div id="genres" class="genres"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="num">03</span>
+        <h2>Top 10 authors</h2>
+      </div>
+      <ol id="authors" class="authors"></ol>
+    </section>
+  </main>
+
+  <footer>
+    Data from <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a>.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
