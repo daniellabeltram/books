@@ -6,4 +6,4 @@ A simple, static book site powered by the [Open Library API](https://openlibrary
 - **Top 3 genres** — Romance, Fantasy, Thriller, with live work counts and covers
 - **Top 10 authors** — curated from US bestseller lists, with photos and details fetched live
 
-No build step. Open `index.html` locally, or deploy the repo root to Netlify (`netlify.toml` included).
+The app lives in the `Books/` folder. No build step: open `Books/index.html` locally, or deploy to Netlify (the root `netlify.toml` publishes `Books/`).
