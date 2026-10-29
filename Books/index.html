@@ -9,10 +9,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try {
+      const t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    } catch {}
+  </script>
 </head>
 <body>
+  <div class="topbar">
+    <div class="theme-switch" role="group" aria-label="Theme">
+      <button type="button" data-theme-choice="light">Light</button>
+      <button type="button" data-theme-choice="dark">Dark</button>
+      <button type="button" data-theme-choice="system">System</button>
+    </div>
+  </div>
+
   <header class="hero">
     <p class="eyebrow">Shelf</p>
+    <p class="greeting" id="greeting">Hello, Daniella.</p>
     <h1>What America is reading.</h1>
     <p class="lede">The books, authors, and genres at the top of the stack right now.</p>
   </header>

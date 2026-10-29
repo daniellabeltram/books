@@ -115,6 +115,25 @@ async function loadAuthors() {
   el.innerHTML = rows.join("");
 }
 
+// Theme: light, dark, or follow the system
+function setTheme(choice) {
+  const root = document.documentElement;
+  if (choice === "system") delete root.dataset.theme;
+  else root.dataset.theme = choice;
+  try { localStorage.setItem("theme", choice); } catch {}
+  document.querySelectorAll("[data-theme-choice]").forEach((b) =>
+    b.setAttribute("aria-pressed", String(b.dataset.themeChoice === choice)));
+}
+
+document.querySelectorAll("[data-theme-choice]").forEach((b) =>
+  b.addEventListener("click", () => setTheme(b.dataset.themeChoice)));
+setTheme(document.documentElement.dataset.theme || "system");
+
+// Greeting by time of day
+const hour = new Date().getHours();
+const part = hour < 12 ? "morning" : hour < 18 ? "afternoon" : "evening";
+$("greeting").textContent = `Good ${part}, Daniella.`;
+
 loadBooks();
 loadGenres();
 loadAuthors();
